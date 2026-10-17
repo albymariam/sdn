@@ -1,0 +1,43 @@
+services:
+  onos-b1:
+    image: onosproject/onos:2.7.0
+    container_name: onos-b1
+    hostname: onos-b1
+    ports:
+      - "8182:8181"
+      - "6654:6653"
+      - "8102:8101"
+    volumes:
+      - ./onos-b1.json:/root/onos/config/cluster.json:ro
+    networks:
+      - onos-cluster-b
+
+  onos-b2:
+    image: onosproject/onos:2.7.0
+    container_name: onos-b2
+    hostname: onos-b2
+    ports:
+      - "8183:8181"
+      - "6655:6653"
+      - "8103:8101"
+    volumes:
+      - ./onos-b2.json:/root/onos/config/cluster.json:ro
+    networks:
+      - onos-cluster-b
+
+  onos-b3:
+    image: onosproject/onos:2.7.0
+    container_name: onos-b3
+    hostname: onos-b3
+    ports:
+      - "8184:8181"
+      - "6656:6653"
+      - "8104:8101"
+    volumes:
+      - ./onos-b3.json:/root/onos/config/cluster.json:ro
+    networks:
+      - onos-cluster-b
+
+networks:
+  onos-cluster-b:
+    driver: bridge

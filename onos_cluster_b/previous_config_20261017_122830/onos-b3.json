@@ -1,0 +1,42 @@
+{
+  "name": "sdn-cluster-b",
+  "node": {
+    "id": "onos-b3",
+    "host": "onos-b3",
+    "port": 9876
+  },
+  "controller": [
+    {
+      "id": "onos-b1",
+      "host": "onos-b1",
+      "port": 9876
+    },
+    {
+      "id": "onos-b2",
+      "host": "onos-b2",
+      "port": 9876
+    },
+    {
+      "id": "onos-b3",
+      "host": "onos-b3",
+      "port": 9876
+    }
+  ],
+  "storage": [
+    {
+      "id": "onos-b1",
+      "host": "onos-b1",
+      "port": 9876
+    },
+    {
+      "id": "onos-b2",
+      "host": "onos-b2",
+      "port": 9876
+    },
+    {
+      "id": "onos-b3",
+      "host": "onos-b3",
+      "port": 9876
+    }
+  ]
+}
